@@ -1,0 +1,37 @@
+{
+  "name": "bacnet-stack",
+  "version": "1.0.0",
+  "description": "BACnet Protocol Stack - minimal MSTP client subset",
+  "build": {
+    "srcDir": "src",
+    "includeDir": "src",
+    "flags": [
+      "-DBACDL_MSTP",
+      "-DMAX_TSM_TRANSACTIONS=16",
+      "-DMAX_ADDRESS_CACHE=16",
+      "-DPRINT_ENABLED=0",
+      "-DBACAPP_MINIMAL",
+      "-DNOMINMAX"
+    ],
+    "srcFilter": [
+      "-<*>",
+      "+<bacnet/bacdcode.c>",
+      "+<bacnet/bacint.c>",
+      "+<bacnet/bacreal.c>",
+      "+<bacnet/bacstr.c>",
+      "+<bacnet/bacaddr.c>",
+      "+<bacnet/memcopy.c>",
+      "+<bacnet/npdu.c>",
+      "+<bacnet/whois.c>",
+      "+<bacnet/iam.c>",
+      "+<bacnet/rp.c>",
+      "+<bacnet/reject.c>",
+      "+<bacnet/abort.c>",
+      "+<bacnet/bacerror.c>",
+      "+<bacnet/bactext.c>",
+      "+<bacnet/indtext.c>",
+      "+<bacnet/datalink/crc.c>",
+      "+<bacnet/basic/sys/bigend.c>"
+    ]
+  }
+}
