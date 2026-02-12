@@ -11,7 +11,10 @@
       "-DMAX_ADDRESS_CACHE=16",
       "-DPRINT_ENABLED=0",
       "-DBACAPP_MINIMAL",
-      "-DNOMINMAX"
+      "-DNOMINMAX",
+      "-Wno-deprecated-declarations",
+      "-Wno-implicit-function-declaration",
+      "-Dmin(a,b)=((a)<(b)?(a):(b))"
     ],
     "srcFilter": [
       "-<*>",
